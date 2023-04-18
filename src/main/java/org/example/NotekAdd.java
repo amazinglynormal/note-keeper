@@ -16,10 +16,10 @@ import java.util.concurrent.Callable;
 @Command(name = "add", description = "adds file to demo folder")
 public class NotekAdd implements Callable<Integer> {
 
-    @Option(names = {"-f", "--file"}, description = "file in which to add note")
+    @Option(names = {"-f", "--file"}, description = "file in which to add note, appends by default")
     File file;
 
-    @Option(names = {"-o", "--overwrite"}, description = "overwrite all previous notes")
+    @Option(names = {"-o", "--overwrite"}, description = "overwrite all previous notes in file")
     boolean overwrite;
 
     @Parameters(index = "0", description = "note that will be written to file")
